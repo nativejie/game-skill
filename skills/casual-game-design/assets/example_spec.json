@@ -1,0 +1,39 @@
+{
+	"_说明": "修仙案例（直播弹幕修仙）调整后的数值：一轮约 32 分钟、打怪每场 3 分钟、击杀给当前级 4%。every_seconds = 对单个玩家平均多久发生一次；chance = 发生时成功的概率；xp_fraction = 当前级所需的比例；currency 可写固定数或 [最小, 最大]；pity = 连续失败第 N 次必出；moment = 算不算一次『好事』（中等以上的奖励）。continuous 的来源每一步都按比例给（挂机）。",
+	"name": "修仙案例（30 人房间，全员出手）",
+	"players": 300,
+	"hours": 3,
+	"step_seconds": 5,
+	"xp_bonus": 0.1,
+	"level": {
+		"max": 81,
+		"xp_growth": 1.18,
+		"gate": {
+			"_说明": "每 9 级要「突破」：成功率按要进入的大境界，失败损失当前进度的一部分；soak 里每 20 秒尝试一次",
+			"every": 9,
+			"attempt_every_seconds": 20,
+			"success": [1.0, 0.9, 0.9, 0.7, 0.7, 0.5, 0.5, 0.3, 0.3],
+			"fail_loss": [0.0, 0.0, 0.0, 0.1, 0.1, 0.2, 0.2, 0.3, 0.3]
+		}
+	},
+	"moments": {"level_up": true, "gate": true},
+	"currencies": ["stones", "crystal"],
+	"sources": [
+		{"name": "挂机", "continuous": true, "every_seconds": 1, "xp_fraction": 0.002},
+		{"name": "击杀", "every_seconds": 28, "xp_fraction": 0.04, "currency": {"stones": [8, 20]}},
+		{"name": "击杀掉幻晶", "every_seconds": 28, "chance": 0.03, "currency": {"crystal": 1}},
+		{"name": "天雷劫被劈", "every_seconds": 1910, "xp_fraction": 0.09},
+		{"name": "幻阵破阵", "every_seconds": 1910, "chance": 0.6, "xp_fraction": 0.3, "currency": {"stones": 20, "crystal": 1}, "moment": true},
+		{"name": "夺宝中奖", "every_seconds": 1910, "chance": 0.2, "currency": {"stones": 300}, "moment": true},
+		{"name": "世界BOSS倒下", "every_seconds": 2520, "xp_fraction": 0.5, "currency": {"stones": 100, "crystal": 3}, "moment": true},
+		{"name": "限时仙品外观", "every_seconds": 1910, "chance": 0.03, "moment": true}
+	],
+	"sinks": [
+		{"name": "法器阁灵品装备", "currency": "stones", "price": 600, "max_buys": 3},
+		{"name": "兑换灵品外观", "currency": "stones", "price": 3000, "max_buys": 2},
+		{"name": "合成灵品外观", "currency": "crystal", "price": 20, "max_buys": 2}
+	],
+	"milestone_levels": [9, 18, 27, 36, 45],
+	"target_level_at_end": 40,
+	"warnings": {"first_moment_minutes": 3, "max_dry_minutes": 10, "level_minutes_range": [2, 15], "min_spend_ratio": 0.3}
+}

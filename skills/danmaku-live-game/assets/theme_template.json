@@ -1,0 +1,56 @@
+{
+	"id": "xianxia",
+	"art": "xianxia",
+	"terms": {
+		"game_title": "云上仙途",
+		"qi": "灵气",
+		"stones": "灵石",
+		"stones_short": "石",
+		"power": "聚",
+		"speed": "速",
+		"crit": "暴击",
+		"passive": "挂机",
+		"monster": "妖兽",
+		"sect": "宗门",
+		"gear": "法器"
+	},
+	"names": {
+		"realm": ["炼气", "筑基", "金丹", "元婴", "化神", "炼虚", "合体", "大乘", "渡劫"],
+		"numeral": ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"],
+		"event": {
+			"invasion": "{monster}入侵",
+			"boss": "世界BOSS"
+		},
+		"phase": {"settle": "结算中", "waiting": "等待中"},
+		"event_copy": {
+			"invasion": ["击败入侵{monster}\n可得{qi} / {stones}奖励", "{cmd.auto_attack}：自动攻击\na编号：指定攻击"]
+		},
+		"item": {"herb": "灵草", "pill_qi": "聚气丹"},
+		"item_desc": {"pill_qi": "立得当前级 20% {qi}"},
+		"monster": ["赤羽火雀", "霜翎雪鹤"],
+		"boss": ["九幽魔龙"]
+	},
+	"commands": {
+		"join": ["加入"],
+		"auto_attack": ["击退"],
+		"leave": ["退出"],
+		"target": ["攻击"],
+		"break": ["突破"],
+		"sign": ["签到"],
+		"explore": ["摸索"],
+		"use": ["服用", "吃"],
+		"bag": ["背包"],
+		"rank": ["排行"]
+	},
+	"text": {
+		"game.unknown": "未识别：%s",
+		"game.join_first": "先发 {cmd.join} 入座",
+		"roster.joined": "%s 入座 %d 号位",
+		"sign.already": "今日已{cmd.sign}",
+		"sign.done": "{cmd.sign}：{stones}+%d、%s×1",
+		"explore.cost": "{cmd.explore}需 %d {stones}",
+		"fx.kill": "击败{monster}",
+		"hud.join_hint": "发 {cmd.join} 入座\n{cmd.join}数字选位",
+		"hud.board_title": "%s榜"
+	}
+}

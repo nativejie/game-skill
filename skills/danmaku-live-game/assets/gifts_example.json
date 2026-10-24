@@ -1,0 +1,12 @@
+{
+	"_说明": "礼物表示例（价格单位：抖币；礼物 id 是游戏内 id，平台礼物 id 在适配层映射）。effect_hours = 效果强度换算成免费玩家几小时的收益；visibility = seat < banner < half < full < ceremony。fx 是规则层的效果 id，显示名和说明写在主题文件里。用 scripts/gift_ladder.py 检查。",
+	"gifts": [
+		{"id": "gift_wand", "platform_gift": "填平台礼物 id", "price": 1, "fx": "boost_once", "effect_hours": 0.05, "visibility": "seat"},
+		{"id": "gift_pill", "platform_gift": "填平台礼物 id", "price": 10, "fx": "open_pill", "effect_hours": 0.3, "visibility": "banner"},
+		{"id": "gift_mirror", "platform_gift": "填平台礼物 id", "price": 19, "fx": "summon_pet", "effect_hours": 0.5, "visibility": "half"},
+		{"id": "gift_donut", "platform_gift": "填平台礼物 id", "price": 52, "fx": "open_gear", "effect_hours": 1.0, "visibility": "half"},
+		{"id": "gift_battery", "platform_gift": "填平台礼物 id", "price": 99, "fx": "double_xp", "effect_hours": 1.5, "visibility": "full"},
+		{"id": "gift_bomb", "platform_gift": "填平台礼物 id", "price": 199, "fx": "thunder_all", "effect_hours": 2.5, "visibility": "full"},
+		{"id": "gift_airdrop", "platform_gift": "填平台礼物 id", "price": 520, "fx": "supreme_look", "effect_hours": 3.0, "visibility": "ceremony"}
+	]
+}
